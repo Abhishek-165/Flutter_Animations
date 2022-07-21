@@ -3,6 +3,7 @@ import 'package:animations/screens/slide_in_transition.dart';
 import 'package:animations/widgets/animation_card.dart';
 import 'package:flutter/material.dart';
 
+import 'fade_in_slider.dart';
 import 'tab_slider_animation.dart';
 
 class HomePage extends StatelessWidget {
@@ -37,6 +38,14 @@ class HomePage extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) => const TabSliderAnimation()));
+                }),
+            AnimationCard(
+                title: "Fade In Slider",
+                navigateTo: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FadeInSlider()));
                 })
           ],
         ),
