@@ -51,10 +51,25 @@ class _TabSliderAnimationState extends State<TabSliderAnimation> {
                           onTap: () {
                             _onItemTapped(index);
                           },
-                          child: Text(
-                            pageTitle[index],
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 16),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                pageTitle[index],
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold, fontSize: 16),
+                              ),
+                              pageIndex == index
+                                  ? Container(
+                                      width: 60,
+                                      height: 2,
+                                      decoration: const BoxDecoration(
+                                          color: Colors.black),
+                                    )
+                                  : const SizedBox(
+                                      height: 2,
+                                    )
+                            ],
                           )),
                     )),
           ),
